@@ -1,0 +1,14 @@
+.header {
+	display: flex;
+	flex-direction: "row";
+	justify-content: space-between;
+	margin-left: 10px;
+}
+
+.cardWrapper {
+}
+
+.gridWrapper {
+	display: grid;
+	grid-auto-flow: column;
+}
