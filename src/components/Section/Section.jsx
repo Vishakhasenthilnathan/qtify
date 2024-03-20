@@ -5,11 +5,12 @@ import GridCard from "../GridCard/GridCard";
 import Carousel from "react-grid-carousel";
 import Grid from "@mui/material/Grid";
 
-export default function Section({ title, data, filterSource, type }) {
+export default function Section({ title, data, filterSource, type, genres }) {
 	const [filters, setFilters] = useState([{ key: "all", label: "all" }]);
 	const [selectedFilterIndex, setSelectedFilterIndex] = useState(0);
 	const [carouselToggle, setCarouselToggle] = useState(true);
 
+	console.log(data);
 	const handleToggle = () => {
 		setCarouselToggle((prevState) => !prevState);
 	};
@@ -48,7 +49,12 @@ export default function Section({ title, data, filterSource, type }) {
 								{cardToRender.map((ele, i) => {
 									return (
 										<Grid item>
-											<GridCard key={i} data={ele} type={type} />
+											<GridCard
+												key={i}
+												data={ele}
+												type={type}
+												genres={genres}
+											/>
 										</Grid>
 									);
 								})}
@@ -58,7 +64,7 @@ export default function Section({ title, data, filterSource, type }) {
 						<Carousel cols={8} rows={1} loop>
 							{cardToRender.map((ele, i) => (
 								<Carousel.Item>
-									<GridCard key={i} data={ele} type={type} />
+									<GridCard key={i} data={ele} type={type} genres={genres} />
 								</Carousel.Item>
 							))}
 						</Carousel>
@@ -68,6 +74,3 @@ export default function Section({ title, data, filterSource, type }) {
 		</>
 	);
 }
-
-// data={cardToRender}
-// renderComponent={(data) => <Card data={ele} type={type}></Card>}

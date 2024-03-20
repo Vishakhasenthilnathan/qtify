@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font-family: "Poppins", sans-serif;
+	font-family: "poppins", sans-serif;
 	line-height: 1.5;
 	background-color: var(--color-black);
 	color: var(--color-white);
@@ -22,5 +22,5 @@ code {
 html,
 body {
 	height: 100%;
-	font-family: "Poppins", sans-serif;
+	font-family: "poppins", sans-serif !important;
 }

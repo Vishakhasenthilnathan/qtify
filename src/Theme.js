@@ -3,14 +3,14 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
 	spacing: 4,
 	typography: {
-		fontFamily: ["Poppins"].join(","),
+		fontFamily: '"Poppins", sans-serif',
 	},
 	palette: {
 		background: {
 			default: "#34C94B", //green
 		},
 		primary: {
-			main: "#121212", //indigo
+			main: "#121212",
 		},
 		secondary: {
 			main: "#FFFFFF", //pink
